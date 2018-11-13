@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Павел Петров](https://up.htmlacademy.ru/htmlcss/23/user/13452).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Кошара](https://htmlacademy.ru/profile/rednaxxxela)
 
 ---
 
