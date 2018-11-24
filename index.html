@@ -54,6 +54,26 @@
       </section> 
       <section class="contacts">
         <!--Здесь будет интерактивная карта с контактами-->
+        <section class="feedback-popup">
+          <h3>Форма обратной связи</h3>
+          <b>Мы обязательно вам ответим!</b>
+          <form class="feedback-form" action="https://echo.gllacyshop.ru" method="post">
+            <p>
+              <label class="visuality-hidden" for="client-name">Имя</label>
+              <input id="client-name" name="name" type="text" value="" placeholder="Как вас зовут?">
+            </p>
+            <p>
+              <label class="visuality-hidden" for="client-email">Почта для ответа</label>
+              <input id="client-email" name="email" type="email" value="" placeholder="Ваша почта для ответа?">
+            </p>
+            <p>
+              <label class="visuality-hidden" for="arial-message">Поле для ввода ообщения</label>
+              <textarea name="message" id="arial-message"></textarea>
+            </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+          <button class="deedback-close" type="button">Закрыть</button>
+        </section>
       </section>
     </main>
     <footer class="main-footer">
