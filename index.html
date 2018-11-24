@@ -68,7 +68,13 @@
         столу</a>
       </article>
       <section class="subscription">
-        <!--Здесь будет форма отправки электронной почты-->
+        <h2>Оформление подписки</h2>
+        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <form class="subscription-form" action="https://echo.gllacyshop.ru" method="post">
+          <label class="visuality-hidden" for="email-sub">Поле ввода email для подписки</label>
+          <input id="email-sub" name="email" type="email" placeholder="Электронная почта">
+          <button class="button" type="submit">Отправить</button>
+        </form>
       </section> 
       <section class="contacts">
         <!--Здесь будет интерактивная карта с контактами-->
@@ -78,11 +84,11 @@
           <form class="feedback-form" action="https://echo.gllacyshop.ru" method="post">
             <p>
               <label class="visuality-hidden" for="client-name">Имя</label>
-              <input id="client-name" name="name" type="text" value="" placeholder="Как вас зовут?">
+              <input id="client-name" name="name" type="text" placeholder="Как вас зовут?">
             </p>
             <p>
               <label class="visuality-hidden" for="client-email">Почта для ответа</label>
-              <input id="client-email" name="email" type="email" value="" placeholder="Ваша почта для ответа?">
+              <input id="client-email" name="email" type="email" placeholder="Ваша почта для ответа?">
             </p>
             <p>
               <label class="visuality-hidden" for="arial-message">Поле для ввода ообщения</label>

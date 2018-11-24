@@ -24,8 +24,26 @@
       </nav>  
       <nav class="user-nav">
         <ul>
-          <li class="search"><a href="#"></a></li>
-          <li class="log-in"><a href="#">Вход</a></li>
+          <li class="search">
+            <a href="#"></a>
+            <form class="search-form" action="https://echo.gllacyshop.ru" method="post">
+              <label class="visuality-hidden" for="search">Поле ввода для поиска</label>
+              <input id="search" name="search" type="search" placeholder="Что ищем?">
+              <button class="visuality-hidden" type="submit">Искать</button>
+            </form>
+          </li>
+          <li class="log-in">
+            <a href="#">Вход</a>
+            <form class="log-in-form" action="https://echo.gllacyshop.ru" method="post">
+              <label class="visuality-hidden" for="user-email">Поле ввода email</label>
+              <input id="user-email" name="email" type="email" placeholder="Электронная почта">
+              <label class="visuality-hidden"  for="user-password">Поле ввода пароля</label>
+              <input id="user-password" name="password" type="password" placeholder="Пароль">
+              <button class="button" type="submit">Войти</button>
+              <a href="#">Забыли пароль</a>
+              <a href="#">Регистрация</a>
+            </form>
+          </li>
           <li class="basket"><a href="#">2 товара</a></li>
         </ul>
       </nav>
