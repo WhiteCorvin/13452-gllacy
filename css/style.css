@@ -1,0 +1,364 @@
+body {
+        margin: 0;
+        padding: 0;
+
+        font-family: "Roboto", "Arial", sans-serif;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 700;
+        color: #ffffff;
+
+        background-color: #849d8f;
+}
+
+/*Шапка сайта*/
+
+.main-nav ul,
+.user-nav ul {
+        list-style: none;
+}
+.site-nav {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+}
+.main-nav a,
+.user-nav a {
+        color: #ffffff;
+}
+.site-nav a {
+        text-decoration-color: #adbdb4;
+}
+.sub-catalog {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+}
+.site-nav a:hover,
+.user-nav a:hover {
+        color: #323232;
+        background-color: #f7f6f3;
+}
+.site-nav a:active {
+        background-color: #ededed;
+}
+.sub-catalog li:first-of-type {
+        font-weight: 700;
+}
+.sub-catalog a {
+        text-decoration: none;
+        color: #323232;
+
+        background-color: #f8f7f4;
+}
+.sub-catalog a:hover {
+        background-color: #fbded7;
+}
+.sub-catalog a:active {
+        background-color: #f6b5a5;
+}
+.log-in > a,
+.basket > a {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+}
+.user-nav input {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #323232;
+
+        border-color: #d3d3d2;
+}
+.user-nav input::placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.user-nav input::-ms-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.user-nav input::-webkit-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.user-nav input:hover {
+        border-color: #c7c6c5;
+}
+.user-nav input:focus {
+        border-color: #f8bdec;
+        /*Не работает смена цвета рамки в мозиле*/        
+}
+.search-form {
+        background-color: #f8f7f4;
+}
+.log-in-form {
+        background-color: #f8f7f4;
+}
+.log-in-form a {
+        font-size: 13px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #323232;
+}
+.log-in-form a:hover {
+        color: #e84d37;
+}
+.log-in-form a:active {
+        color: #e84d37;
+}
+.button {
+        outline: none;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #fefefe;       
+        background-color: #e84d37;
+
+        background-image: -webkit-linear-gradient(left, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+        background-image: -o-linear-gradient(left, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+        background-image: linear-gradient(to right, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+        box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+}
+.button:hover {
+        /*Добавить color overlay*/
+}
+.button:focus:active {
+        background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+        box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+.header-contacts b {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 700;
+}
+.header-contacts a {
+        text-decoration: none;
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #ffffff;
+}
+
+/*Полная корзина*/
+
+.basket-fill a {
+        color: #323232;
+        background-color: #f7f6f3;
+}
+.basket-inner {
+        background-color: #f8f7f4;
+}
+.basket-inner table {
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 400;
+        color:  #323232;
+}
+.basket-inner span {
+        color: #999999;
+}
+.basket-inner b {
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 700;
+        color:  #323232;
+}
+
+/*Основной контент*/
+
+.features {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        color: #323232;
+
+        background-color: #ede1c8;
+        background-image: url("../img/waffle-bg.png");
+}
+.features > p {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 500;
+}
+.features ul {
+        list-style: none;
+}
+.blog {
+        color: #323232;
+        background-color: #ffffff;
+}
+.blog h2 {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+}
+.blog a {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 700;
+        color: #323232;
+}
+.blog a:hover {
+        color: #e84d37;
+}
+.blog a:active {
+        color: #e84d37;
+}
+.subscription {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        color: #5a5a5a;
+
+        background-color: #f8f7f4;
+}
+.subscription-form input {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #323232;
+
+        border-color: #d3d3d2;
+}
+.subscription-form input::placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.subscription-form input::-ms-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.subscription-form input::-webkit-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.subscription-form input:hover {
+        border-color: #c7c6c5;
+}
+.subscription-form input:focus {
+        border-color: #f8bdec;
+        /*Не работает смена цвета рамки в мозиле*/        
+}
+.feedback-popup {
+        background-color: #f8f7f4; 
+}
+.feedback-popup b {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 500;
+        color: #323232;
+}
+.feedback-form input {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #323232;
+
+        border-color: #d3d3d2;
+}
+.feedback-form input::placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.feedback-form input::-ms-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.feedback-form input::-webkit-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.feedback-form input:hover {
+        border-color: #c7c6c5;
+}
+.feedback-form input:focus {
+        border-color: #f8bdec;
+        /*Не работает смена цвета рамки в мозиле*/        
+}
+.feedback-form textarea {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #323232;
+
+        border-color: #d3d3d2;
+}
+.feedback-form textarea::placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.feedback-form textarea::-ms-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.feedback-form textarea::-webkit-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.feedback-form textarea:hover {
+        border-color: #c7c6c5;
+}
+.feedback-form textarea:focus {
+        border-color: #f8bdec;
+        /*Не работает смена цвета рамки в мозиле*/        
+}
+
+/*Cтраница каталога*/
+
+
+
+
+/*Подвал сайта*/
+.main-footer ul {
+        list-style: none;
+}
+.footer-social  {
+        text-align: center;
+}
+.social-button {
+        color: #ffffff;
+}
+.footer-nav a {
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+        color: #ffffff;
+        text-decoration-color: #adbdb4;
+}
+.footer-nav a:hover {
+        color: #ffbc9e;
+}
+.footer-nav a:active {
+        color: #ffbc9e;
+}
+.footer-nav b {
+        font-weight: 700;
+}
+.copyright span {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        color: #ffffff;
+}
+.copyright a {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        color: #ffffff;
+        text-decoration-color: #adbdb4;
+}
+.copyright a:hover {
+        color: #ffbc9e;
+}
+.copyright a:active {
+        color: #ffbc9e;
+}
