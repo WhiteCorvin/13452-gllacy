@@ -69,8 +69,15 @@ body {
         line-height: 24px;
         font-weight: 700;
         color: #323232;
-
-        border-color: #d3d3d2;
+        
+        outline: none;
+        border: 1px solid #d3d3d2;
+}
+.user-nav input:hover {
+        border: 2px solid #c7c6c5;
+}
+.user-nav input:focus {
+        border: 2px solid #8fbdec; 
 }
 .user-nav input::placeholder {
         font-weight: 400;
@@ -83,13 +90,6 @@ body {
 .user-nav input::-webkit-input-placeholder {
         font-weight: 400;
         color: #999999;
-}
-.user-nav input:hover {
-        border-color: #c7c6c5;
-}
-.user-nav input:focus {
-        border-color: #f8bdec;
-        /*Не работает смена цвета рамки в мозиле*/        
 }
 .search-form {
         background-color: #f8f7f4;
@@ -233,8 +233,9 @@ body {
         line-height: 24px;
         font-weight: 700;
         color: #323232;
-
-        border-color: #d3d3d2;
+        
+        outline: none;
+        border: 1px solid #d3d3d2;
 }
 .subscription-form input::placeholder {
         font-weight: 400;
@@ -249,11 +250,10 @@ body {
         color: #999999;
 }
 .subscription-form input:hover {
-        border-color: #c7c6c5;
+        border: 2px solid #c7c6c5;
 }
 .subscription-form input:focus {
-        border-color: #f8bdec;
-        /*Не работает смена цвета рамки в мозиле*/        
+        border: 2px solid #8fbdec;       
 }
 .feedback-popup {
         background-color: #f8f7f4; 
@@ -269,8 +269,9 @@ body {
         line-height: 24px;
         font-weight: 700;
         color: #323232;
-
-        border-color: #d3d3d2;
+        
+        outline: none;
+        border: 1px solid #d3d3d2;
 }
 .feedback-form input::placeholder {
         font-weight: 400;
@@ -285,19 +286,19 @@ body {
         color: #999999;
 }
 .feedback-form input:hover {
-        border-color: #c7c6c5;
+        border: 2px solid #c7c6c5;
 }
 .feedback-form input:focus {
-        border-color: #f8bdec;
-        /*Не работает смена цвета рамки в мозиле*/        
+        border: 2px solid #8fbdec;      
 }
 .feedback-form textarea {
         font-size: 14px;
         line-height: 24px;
         font-weight: 700;
         color: #323232;
-
-        border-color: #d3d3d2;
+        
+        outline: none;
+        border: 1px solid #d3d3d2;
 }
 .feedback-form textarea::placeholder {
         font-weight: 400;
@@ -312,11 +313,10 @@ body {
         color: #999999;
 }
 .feedback-form textarea:hover {
-        border-color: #c7c6c5;
+        border: 2px solid #c7c6c5;
 }
 .feedback-form textarea:focus {
-        border-color: #f8bdec;
-        /*Не работает смена цвета рамки в мозиле*/        
+        border: 2px solid #8fbdec;     
 }
 
 /*Cтраница каталога*/
