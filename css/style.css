@@ -182,6 +182,74 @@ body {
 
 /*Контент главной страницы*/
 
+.slide h2 {
+        font-size: 60px;
+        line-height: 61px;
+        font-weight: 700;
+        text-align: center;
+}
+.slide .button {
+        font-size: 32px;
+        line-height: 44px;
+        font-weight: 700;
+        text-decoration: none;
+}
+.slider {
+        list-style: none;
+} 
+.slider button {
+        width: 21px;
+        height: 21px;
+        background-color: transparent;
+        border: 2px solid #ffffff;
+}
+.slider .btn-active {
+        background-color: #ffffff;
+}     
+.slider button:hover {
+        background-color: #b2c1b7;
+}
+.slider button:active { 
+        background-color: #ffffff;
+}
+.stock h1 {
+        font-size: 35px;
+        line-height: 41px;
+        font-weight: 700;
+}
+.stock p {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 700;
+}
+.stock a {
+        text-decoration: none;
+}
+.raspberries {
+        background-image: url("../img/raspberries-bg.jpg");
+        background-repeat: no-repeat;
+}
+.chocolate {
+        background-image: url("../img/chocolate-bg.jpg");
+        background-repeat: no-repeat;
+}
+.hits-list {
+        list-style: none;
+}
+.hit-item:hover {
+        background-color: #9bafa3;
+}
+.hit-item h3 {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        text-decoration: uppercase;
+}
+.hit-item b {
+        font-size: 45px;
+        line-height: 45px;
+        font-weight: 700;
+}
 .features {
         font-size: 16px;
         line-height: 22px;
@@ -254,6 +322,33 @@ body {
 }
 .subscription-form input:focus {
         border: 2px solid #8fbdec;       
+}
+.main-contacts {
+        background-color: #ffffff;
+        color: #323232;
+}
+.contacts img {
+        width: 1200px;
+        height: 430px;
+}
+.main-contacts span {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;       
+}
+.main-contacts .address {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+}
+.main-contacts .main-tel {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #323232;
+}
+.main-contacts .button {
+        text-decoration: none;
 }
 .feedback-popup {
         background-color: #f8f7f4; 
@@ -345,6 +440,60 @@ body {
 .breadcrumbs a:active {
         color: #ffbc9e;
 }
+.form-filter fieldset {
+        background-color: rgba(248,247,244,0.2);
+        border: none;
+}
+.form-filter ul {
+        list-style: none;
+}
+.form-filter legend {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+}
+.form-filter span {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+}
+.form-filter label {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+}
+.form-filter .sorting {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+        color: #ffffff;
+
+        background-color: rgba(248,247,244,0.2);
+        border: none;
+}
+.form-filter .sorting:hover {
+        color: #323232;
+}
+.form-filter .sorting:active {
+        color: #323232;
+        background-color: #ffffff;
+}
+.form-filter .btn-submit {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+        color: #ffffff;
+
+        background-color: rgba(248,247,244,0.2);
+}
+.form-filter .btn-submit:hover {
+        color: #323232;
+        background-color: #fbfcfb;
+}
+.form-filter .btn-submit:active {
+        color: #323232;
+        background-color: #eaeaea;
+}
 .catalog-list {
         list-style: none;
 }
@@ -362,7 +511,28 @@ body {
         line-height: 45px;
         font-weight: 700;
 }
+.pagination-list {
+        list-style: none;
 
+}
+.pagination-list a {
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+        color: #ffffff;
+}
+.pagination-list .pagination-item-current a {
+        color: #323232;
+        background-color: #ffffff;
+}
+.pagination-list a:hover {
+        background-color: rgba(248,247,244,0.2);
+}
+.pagination-list a:active {
+        color: #323232;
+        background-color: #ffffff;
+}
 /*Подвал сайта*/
 
 .main-footer ul {
