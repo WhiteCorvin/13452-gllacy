@@ -25,6 +25,9 @@ body {
         flex-wrap: wrap;
         width: 1146px;
 }
+.catalog-page .main-header{
+        margin-bottom: 0;
+}
 .main-nav {
         display: flex;
         margin-right: 319px;
@@ -464,7 +467,10 @@ body {
 }
 
 /*Cтраница каталога*/
-
+.main {
+        display: flex;
+        flex-direction: column;
+}
 .page-title {
         font-size: 35px;
         line-height: 41px;
@@ -543,8 +549,22 @@ body {
         color: #323232;
         background-color: #eaeaea;
 }
+.catalog {
+        display: flex;
+        flex-direction: column;
+}
 .catalog-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+        margin-bottom: 80px;
+        padding: 0;
+
         list-style: none;
+}
+.catalog-item {
+        width: 267px;
 }
 .catalog-item:hover {
         background-color: #9bafa3;
@@ -561,6 +581,8 @@ body {
         font-weight: 700;
 }
 .pagination-list {
+        align-self: flex-end;
+
         list-style: none;
 
 }
