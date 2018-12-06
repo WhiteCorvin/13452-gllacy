@@ -21,9 +21,10 @@ body {
 .main-header {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 280px;
         flex-wrap: wrap;
         width: 1146px;
+        margin-bottom: 280px;
+        padding-top: 10px;
 }
 .catalog-page .main-header{
         margin-bottom: 0;
@@ -39,10 +40,27 @@ body {
 
         list-style: none;
 }
-.site-nav {
+.main-nav > a {
+        margin-right: 25px;
+}
+.main-nav .site-nav {
+        display: flex;
+        padding-top: 20px;
+
         font-size: 16px;
         line-height: 18px;
         font-weight: 500;
+}
+.site-nav li {
+        padding: 0;
+        margin-right: 25px;
+}
+
+.sub-catalog,
+.search-form,
+.log-in-form,
+.basket-inner {
+        display: none;
 }
 .main-nav a,
 .user-nav a {
@@ -78,6 +96,13 @@ body {
 }
 .sub-catalog a:active {
         background-color: #f6b5a5;
+}
+.user-nav ul {
+        display: flex;
+        padding-top: 12px;
+}
+.user-nav li {
+        margin-left: 10px;
 }
 .log-in > a,
 .basket > a {
@@ -132,6 +157,7 @@ body {
         color: #e84d37;
 }
 .button {
+        display: block;
         outline: none;
         font-size: 18px;
         line-height: 24px;
@@ -208,18 +234,30 @@ body {
 /*Контент главной страницы*/
 
 .slide h2 {
+        width: 680px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
         font-size: 60px;
         line-height: 61px;
         font-weight: 700;
         text-align: center;
 }
 .slide .button {
+        width: 280px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+
         font-size: 32px;
         line-height: 44px;
         font-weight: 700;
         text-decoration: none;
 }
 .slider {
+        display: flex;
+        magin: 0;
+        padding: 0;
+
         list-style: none;
 } 
 .slider button {
@@ -237,7 +275,22 @@ body {
 .slider button:active { 
         background-color: #ffffff;
 }
-.stock h1 {
+.promo-stocks {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+}
+.promo-stocks h2 {
+        display: none;
+}
+.stock {
+       width: 520px;
+       padding: 20px; 
+}
+.stock h3 {
+        margin: 0;
+        padding: 0;
+
         font-size: 35px;
         line-height: 41px;
         font-weight: 700;
@@ -258,8 +311,18 @@ body {
         background-image: url("../img/chocolate-bg.jpg");
         background-repeat: no-repeat;
 }
+.hits {
+        margin-bottom: 40px;
+}
 .hits-list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
         list-style: none;
+}
+.hit-item {
+        width: 267px;
 }
 .hit-item:hover {
         background-color: #9bafa3;
@@ -403,6 +466,7 @@ body {
         text-decoration: none;
 }
 .feedback-popup {
+        display: none;
         background-color: #f8f7f4; 
 }
 .feedback-popup b {
@@ -477,10 +541,17 @@ body {
         font-weight: 700;
 }
 .breadcrumbs {
+        display: flex;
+        margin: 0;
+        padding: 0;
+
         list-style: none;
         font-size: 14px;
         line-height: 16px;
         font-weight: 400;
+}
+.breadcrumbs li {
+        margin-right: 15px;
 }
 .breadcrumbs a {
         font-size: 14px;
@@ -494,6 +565,22 @@ body {
 }
 .breadcrumbs a:active {
         color: #ffbc9e;
+}
+.filter ul {
+        margin: 0;
+        padding: 0;
+}
+.form-filter {
+        display: flex;
+        width: 880px;
+        flex-wrap: wrap;
+
+}
+.filter-fat {
+        display: flex;
+}
+.filter-inner {
+        display: flex;
 }
 .form-filter fieldset {
         background-color: rgba(248,247,244,0.2);
@@ -582,6 +669,9 @@ body {
 }
 .pagination-list {
         align-self: flex-end;
+        display: flex;
+        justify-content: space-between;
+        width: 190px;
 
         list-style: none;
 
@@ -609,20 +699,34 @@ body {
 .main-footer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 }
 .main-footer ul {
+        margin: 0;
+        padding: 0;
         list-style: none;
 }
 .footer-social  {
+        display: flex;
+
         text-align: center;
 }
 .social-button {
         color: #ffffff;
 }
+.footer-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 315px;
+        margin: 0;
+        padding: 0;
+}
 .footer-nav a {
         font-size: 13px;
         line-height: 18px;
         font-weight: 400;
+
         color: #ffffff;
         text-decoration-color: #adbdb4;
 }
@@ -634,6 +738,10 @@ body {
 }
 .footer-nav b {
         font-weight: 700;
+}
+.copyright {
+        display: flex;
+        flex-direction: column;
 }
 .copyright span {
         font-size: 12px;
