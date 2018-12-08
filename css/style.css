@@ -22,19 +22,44 @@ img {
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-  position: absolute;
+        position: absolute;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
 
-  white-space: nowrap;
+        white-space: nowrap;
 
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+}
+.site-wrapper {
+        min-width: 940px;
+        background-color: #849d8f;
+        background-image: url("../img/promo-1.png");
+        background-repeat: no-repeat;
+        background-position:  center 85px;
+        
+        transition: background-image 0.5s ease, background-color 0.5s ease;
+        /* Для демонстрации */
+        min-height: 100vh;
+}
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: url("../img/promo-2.png");
+}
+
+.site-wrapper::after {
+  background-image: url("../img/promo-3.png");
 }
 
 /*Шапка сайта*/
@@ -45,7 +70,7 @@ input[type="radio"].visually-hidden {
         flex-wrap: wrap;
         position: relative;
         width: 1146px;
-        margin-bottom: 300px;
+        margin-bottom: 312px;
         padding-top: 10px;
 }
 .catalog-page .main-header{
@@ -298,15 +323,20 @@ input[type="radio"].visually-hidden {
 }
 .button {
         display: block;
-        outline: none;
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: 700;
-        color: #fefefe;       
-        background-color: #e84d37;
 
-        background-image: linear-gradient(to right, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-        box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+        text-align: center;
+        color: #ffffff;
+        vertical-align: top;
+        text-decoration: none;
+        text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+        background: #f26843;
+        background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+        border-radius: 50px;
+        box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+        border: none;
+
+        cursor: pointer;
 }
 .button:hover {
         /*Добавить color overlay*/
@@ -378,7 +408,17 @@ input[type="radio"].visually-hidden {
 
 /*Контент главной страницы*/
 
-.slide h2 {
+.promo-slider {
+        position: relative;
+}
+.slider-list {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+}
+
+.slider-list h2 {
         width: 680px;
         margin: 0 auto;
         margin-bottom: 30px;
@@ -389,48 +429,77 @@ input[type="radio"].visually-hidden {
         text-align: center;
 }
 .slide .button {
-        width: 280px;
+        width: 210px;
         margin: 0 auto;
         margin-bottom: 40px;
+        padding: 10px 35px 10px 35px;
 
         font-size: 32px;
         line-height: 44px;
         font-weight: 700;
         text-decoration: none;
 }
-.slider {
-        display: flex;
-        magin: 0;
-        padding: 0;
+.slider-controls label {
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        margin-right: 8px;
 
-        list-style: none;
-} 
-.slider button {
-        width: 21px;
-        height: 21px;
+        vertical-align: top;
+
         background-color: transparent;
         border: 2px solid #ffffff;
+        border-radius: 50%;
+        cursor: pointer;
 }
-.slider .btn-active {
+#product-1:checked ~ .site-wrapper {
+        background-color: #849d8f;
+        background-image: url("../img/promo-1.png");
+}
+
+#product-2:checked ~ .site-wrapper {
+        background-color: #8996a6;
+        background-image: url("../img/promo-2.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+        background-color: #9d8b84;
+        background-image: url("../img/promo-3.png");
+}
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3 {
+        display: block;
+}
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
         background-color: #ffffff;
-}     
-.slider button:hover {
-        background-color: #b2c1b7;
 }
-.slider button:active { 
-        background-color: #ffffff;
+.slider-controls {
+        position: absolute;
+        bottom: 20px;
+        left: 27px;
+        z-index: 20;
+
+        font-size: 0;
 }
+.slide {
+        display:none;
+}
+
 .promo-stocks {
         display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
 }
-.promo-stocks h2 {
-        display: none;
-}
 .stock {
-       width: 520px;
-       padding: 20px; 
+        position: relative;
+        box-sizing: border-box;
+        width: 560px;
+        min-height: 230px;
+        padding: 12px 20px 20px 20px; 
+        border-radius: 15px;
 }
 .stock h3 {
         margin: 0;
@@ -446,7 +515,15 @@ input[type="radio"].visually-hidden {
         font-weight: 700;
 }
 .stock a {
-        text-decoration: none;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        width: 170px;
+        padding: 12px 5px;
+
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
 }
 .raspberries {
         background-image: url("../img/raspberries-bg.jpg");
@@ -467,21 +544,30 @@ input[type="radio"].visually-hidden {
         list-style: none;
 }
 .hit-item {
+        display: flex;
+        position: relative;
+        flex-direction: column;
         width: 267px;
 }
 .hit-item:hover {
         background-color: #9bafa3;
 }
 .hit-item h3 {
+        order: 3;
         font-size: 16px;
         line-height: 22px;
         font-weight: 500;
         text-decoration: uppercase;
 }
 .hit-item b {
+        order: 2;
         font-size: 45px;
         line-height: 45px;
         font-weight: 700;
+}
+.hit-item img {
+        order: 1;
+        border-radius: 50%
 }
 .features {
         display: flex;
