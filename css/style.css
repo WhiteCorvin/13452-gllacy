@@ -491,7 +491,7 @@ input[type="radio"].visually-hidden {
 .promo-stocks {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 40px;
+        margin-bottom: 38px;
 }
 .stock {
         position: relative;
@@ -549,25 +549,44 @@ input[type="radio"].visually-hidden {
         flex-direction: column;
         width: 267px;
 }
+.hit-item::before {
+        content: "";
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-image: url("../img/hit.svg");
+}
 .hit-item:hover {
         background-color: #9bafa3;
 }
 .hit-item h3 {
-        order: 3;
+        order: 2;
+
+        margin: 0;
+        margin-top: 10px;
+
         font-size: 16px;
         line-height: 22px;
         font-weight: 500;
-        text-decoration: uppercase;
+        text-align: center;
+        text-decoration: underline;
 }
 .hit-item b {
-        order: 2;
+        position: absolute;
+        top: 205px;
         font-size: 45px;
+        line-height: 45px;
+        font-weight: 700;
+}
+.hit-item span {
+        font-size: 30px;
         line-height: 45px;
         font-weight: 700;
 }
 .hit-item img {
         order: 1;
-        border-radius: 50%
+        border-radius: 50%;
 }
 .features {
         display: flex;
