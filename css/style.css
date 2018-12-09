@@ -365,12 +365,29 @@ input[type="radio"].visually-hidden {
 }
 
 /*Полная корзина*/
-
-.basket-fill a {
-        color: #323232;
+.basket.basket-fill {
         background-color: #f7f6f3;
 }
+.basket-fill a {
+        color: #323232;
+}
+.basket.basket-fill:hover .basket-inner,
+.basket.basket-fill:focus .basket-inner {
+        visibility: visible;
+        z-index: 1;     
+}
 .basket-inner {
+        position: absolute;
+        right: 0;
+        bottom: -90px;
+        width: 343px;
+        height: 85px;
+        border-radius: 5px;
+        visibility: hidden;
+        transition: visibility 0.5s;
+
+        text-align: center;
+        vertical-align: middle;
         background-color: #f8f7f4;
 }
 .basket-inner table {
