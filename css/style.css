@@ -43,9 +43,7 @@ input[type="radio"].visually-hidden {
         background-repeat: no-repeat;
         background-position:  center 85px;
         
-        transition: background-image 0.5s ease, background-color 0.5s ease;
-        /* Для демонстрации */
-        min-height: 100vh;
+        transition: background-image 0.5s ease, background-color 0.5s ease;        
 }
 .site-wrapper::before,
 .site-wrapper::after {
@@ -300,14 +298,14 @@ input[type="radio"].visually-hidden {
         color: #323232;
         
         border: none;
-        outline: 1px solid #d3d3d2;
-        outline-offset: 0;
+        border: 1px solid #d3d3d2;
+        
 }
 .user-nav input:hover {
-        outline: 2px solid #c7c6c5;
+        border: 2px solid #c7c6c5;
 }
 .user-nav input:focus {
-        outline: 2px solid #8fbdec; 
+        border: 2px solid #8fbdec; 
 }
 .user-nav input::placeholder {
         font-weight: 400;
@@ -410,6 +408,7 @@ input[type="radio"].visually-hidden {
 
 .promo-slider {
         position: relative;
+        margin-bottom: 43px;
 }
 .slider-list {
         margin: 0;
@@ -431,7 +430,6 @@ input[type="radio"].visually-hidden {
 .slide .button {
         width: 210px;
         margin: 0 auto;
-        margin-bottom: 40px;
         padding: 10px 35px 10px 35px;
 
         font-size: 32px;
@@ -593,17 +591,43 @@ input[type="radio"].visually-hidden {
         flex-direction: column;
         width: 1106px;
         margin-bottom: 40px;
-        padding: 25px 20px;
+        padding: 23px 20px 7px 20px;
+
 
         font-size: 16px;
         line-height: 22px;
         font-weight: 400;
         color: #323232;
-
+        
+        border-radius: 12px;
         background-color: #ede1c8;
         background-image: url("../img/waffle-bg.png");
 }
+.features ul p {
+        position: relative;
+}
+.features ul p::before {
+        content: "";
+        position: absolute;
+        left: -56px;
+        top: -10px;
+        width: 49px;
+        height: 49px;
+}
+.features .ice-cream-icon::before {
+        background-image: url(../img/icecream.svg);
+}
+.features .cow-icon::before {
+        background-image: url(../img/cow.svg);
+}
+.features .leaf-icon::before {
+        background-image: url(../img/leaf.svg);
+}
+.features .thermometer-icon::before {
+        background-image: url(../img/thermometer.svg);
+}
 .features > p {
+        margin: 0;
         font-size: 24px;
         line-height: 30px;
         font-weight: 500;
@@ -618,7 +642,12 @@ input[type="radio"].visually-hidden {
         list-style: none;
 }
 .features li {
-        width: 540px;
+        width: 480px;
+        margin-left: 55px;
+}
+.features p {
+        margin: 0;
+        margin-bottom: 20px;
 }
 .index-column {
         display: flex;
@@ -628,13 +657,21 @@ input[type="radio"].visually-hidden {
         margin-bottom: 40px;
 }
 .blog {
-        width: 560px;
+        width: 290px;
+        min-height: 170px;
         margin-right: 26px;
+        padding: 25px 250px 25px 20px;
+        border-radius: 15px;
 
         color: #323232;
         background-color: #ffffff;
+        background-image: url("../img/blog-bg.jpg");
+        background-repeat: no-repeat; 
 }
 .blog h2 {
+        margin: 0;
+        padding: 0;
+
         font-size: 16px;
         line-height: 22px;
         font-weight: 500;
@@ -652,25 +689,55 @@ input[type="radio"].visually-hidden {
         color: #e84d37;
 }
 .subscription {
-        width: 560px;
-
+        width: 550px;
+        padding: 5px;
+        
         font-size: 16px;
         line-height: 22px;
         font-weight: 400;
         color: #5a5a5a;
+        
+        border-radius: 15px;
+        background-color: #f8f7f4;
+        background-image: repeating-linear-gradient(135deg, #f8f7f4, #f8f7f4 7px, #94ceff 7px, #94ceff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
+}
+.subscription-form-wrapper {
 
+        min-height: 155px;
+        margin: 0;
+        padding: 30px 20px 25px 20px;
+        border-radius: 15px;
         background-color: #f8f7f4;
 }
+.subscription-form-wrapper p {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 35px;    
+}
 .subscription-form input {
+        float: left;
+        width: 345px;
+        padding: 10px;  
+
         font-size: 14px;
         line-height: 24px;
         font-weight: 700;
         color: #323232;
         
-        outline: none;
+        border: none;
         border: 1px solid #d3d3d2;
+        border-radius: 5px;
+}
+.subscription-form .button {
+        float: right;
+        padding: 10px 18px;
+
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
 }
 .subscription-form input::placeholder {
+        font-size: 16px;
         font-weight: 400;
         color: #999999;
 }
@@ -688,13 +755,29 @@ input[type="radio"].visually-hidden {
 .subscription-form input:focus {
         border: 2px solid #8fbdec;       
 }
+.contacts.container {
+        position: relative;
+        width: 1200px;
+        padding: 0;
+}
 .main-contacts {
+        position: absolute;
+        top: 63px;
+        right: 27px;
+        width: 250px;
+        padding: 28px 25px;
+        border-radius: 15px;
         background-color: #ffffff;
         color: #323232;
 }
 .contacts img {
         width: 1200px;
         height: 430px;
+}
+.main-contacts p {
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
 }
 .main-contacts span {
         font-size: 14px;
@@ -711,8 +794,10 @@ input[type="radio"].visually-hidden {
         line-height: 24px;
         font-weight: 700;
         color: #323232;
+        text-decoration: none;
 }
 .main-contacts .button {
+        padding: 10px 25px;
         text-decoration: none;
 }
 .feedback-popup {
