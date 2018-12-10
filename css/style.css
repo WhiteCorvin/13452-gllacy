@@ -137,7 +137,7 @@ input[type="radio"].visually-hidden {
         position: relative;
 }
 .sub-catalog {
-        display: none;
+        visibility: hidden;
         flex-direction: column;
         align-content: stretch;
         position: absolute;
@@ -145,8 +145,13 @@ input[type="radio"].visually-hidden {
         bottom: -170px;
         border-radius: 5px;
         overflow: hidden;
+        transition: visibility 0.5s;
 
         background-color: #f8f7f4;
+}
+.box-sub-catalog:hover .sub-catalog,
+.box-sub-catalog:focus .sub-catalog {
+        visibility: visible;
 }
 .sub-catalog li {
         flex-shrink: 0;
@@ -171,6 +176,9 @@ input[type="radio"].visually-hidden {
 }
 .sub-catalog li:active {
         background-color: #f6b5a5;
+}
+.catalog-page .sub-catalog li:nth-of-type(2) {
+        background-color: ;
 }
 .user-nav ul {
         display: flex;
@@ -1074,6 +1082,7 @@ input[type="radio"].visually-hidden {
         justify-content: space-between;
         width: 180px;
         margin: 0;
+        margin-bottom: 40px;
         padding: 0;
 
         list-style: none;
@@ -1108,6 +1117,7 @@ input[type="radio"].visually-hidden {
 }
 .main-footer ul {
         margin: 0;
+        margin-top: 5px;
         padding: 0;
         list-style: none;
 }
@@ -1125,10 +1135,10 @@ input[type="radio"].visually-hidden {
 .social-button svg {
         border: 3px solid #c2cec7;
         border-radius: 50%;
-        opacity: 0.2;   
+        fill-opacity: 0.8;   
 }
 .social-button:hover svg {
-        opacity: 1;
+        fill-opacity: 1;
 }
 .footer-nav {
         display: flex;
