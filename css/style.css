@@ -32,7 +32,9 @@ input[type="radio"].visually-hidden {
 
         white-space: nowrap;
 
-        clip-path: inset(100%);
+        -webkit-clip-path: inset(100%);
+
+                clip-path: inset(100%);
         clip: rect(0 0 0 0);
         overflow: hidden;
 }
@@ -106,7 +108,8 @@ input[type="radio"].visually-hidden {
         color: #ffffff;
 }
 .site-nav a {
-        text-decoration-color: #adbdb4;
+        -webkit-text-decoration-color: #adbdb4;
+                text-decoration-color: #adbdb4;
 }
 .site-nav > li:hover,
 .user-nav > li:hover {
@@ -137,7 +140,7 @@ input[type="radio"].visually-hidden {
         top: 37px;
         border-radius: 5px;
         overflow: hidden;
-        transition: visibility 0.5s;
+        transition: visibility 0.1s;
 
         font-size: 14px;
         line-height: 16px;
@@ -220,11 +223,10 @@ input[type="radio"].visually-hidden {
         position: absolute;
         right: -1px;
         top: 38px;
-        width: 332px;
-        padding: 20px 5px;
+        padding: 20px 16px;
         border-radius: 5px;
         visibility: hidden;
-        transition: visibility 0.5s;
+        transition: visibility 0.1s;
 
         text-align: center;
         vertical-align: middle;
@@ -239,6 +241,7 @@ input[type="radio"].visually-hidden {
 .search-form input {
         width: 310px;
         padding: 9px 15px;
+        margin: 0 auto;
         border-radius: 5px;
 }
 .log-in > a,
@@ -271,6 +274,8 @@ input[type="radio"].visually-hidden {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
+        align-content: center;
         position: absolute;
         right: -1px;
         top: 36px;
@@ -278,7 +283,7 @@ input[type="radio"].visually-hidden {
         width: 256px;
         padding: 20px 10px;
         border-radius: 5px;
-        transition: visibility 0.5s;
+        transition: visibility 0.1s;
 
         text-align: center;
         vertical-align: middle;
@@ -293,14 +298,15 @@ input[type="radio"].visually-hidden {
         border-radius: 5px;
 }
 .log-in-form button {
-        float: left;
         margin-top: 4px;
         margin-left: 8px;
         padding: 11px    24px;
         border-radius: 19px;
 }
 .log-in-form-reference {
-        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         margin-right: 8px;
 }
 .log-in-form a {
@@ -344,6 +350,18 @@ input[type="radio"].visually-hidden {
 }
 .user-nav input:focus {
         border: 2px solid #8fbdec; 
+}
+.user-nav input::-webkit-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.user-nav input:-ms-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.user-nav input::-ms-input-placeholder {
+        font-weight: 400;
+        color: #999999;
 }
 .user-nav input::placeholder {
         font-weight: 400;
@@ -425,7 +443,7 @@ input[type="radio"].visually-hidden {
         padding: 15px 15px;
         border-radius: 5px;
         visibility: hidden;
-        transition: visibility 0.5s;
+        transition: visibility 0.1s;
 
         text-align: center;
         vertical-align: middle;
@@ -474,11 +492,13 @@ input[type="radio"].visually-hidden {
 }
 
 .item-del::before {
-        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
 }
 
 .item-del::after {
-        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
 }
 .basket-inner img {
         width: 33px;
@@ -489,6 +509,7 @@ input[type="radio"].visually-hidden {
         color: #999999;
 }
 .basket-inner b {
+        align-self: flex-end;
         margin-left: auto;
         margin-bottom: 15px;
 
@@ -498,8 +519,8 @@ input[type="radio"].visually-hidden {
         color:  #323232;
 }
 .basket-inner a {
+        align-self: flex-end;
         margin-left: auto;
-
         padding: 10px 13px;
         font-size: 18px;
         line-height: 24px;
@@ -516,7 +537,7 @@ input[type="radio"].visually-hidden {
         width: 80px;
 }
  /*Контент главной страницы*/
-}
+
 
 .promo-slider {
         position: relative;
@@ -875,6 +896,21 @@ input[type="radio"].visually-hidden {
         line-height: 24px;
         font-weight: 700;
 }
+.subscription-form input::-webkit-input-placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        color: #999999;
+}
+.subscription-form input:-ms-input-placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        color: #999999;
+}
+.subscription-form input::-ms-input-placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        color: #999999;
+}
 .subscription-form input::placeholder {
         font-size: 16px;
         font-weight: 400;
@@ -948,7 +984,8 @@ input[type="radio"].visually-hidden {
         width: 426px;
         margin-left: -238px;
         padding: 15px 25px; 
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%); 
+                transform: translateY(-50%);
         background-color: #f8f7f4; 
         border-radius: 5px;
 }
@@ -970,6 +1007,18 @@ input[type="radio"].visually-hidden {
         border-radius: 5px;
         outline: none;
         border: 1px solid #d3d3d2;
+}
+.feedback-form input::-webkit-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.feedback-form input:-ms-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.feedback-form input::-ms-input-placeholder {
+        font-weight: 400;
+        color: #999999;
 }
 .feedback-form input::placeholder {
         font-weight: 400;
@@ -1002,6 +1051,18 @@ input[type="radio"].visually-hidden {
         border-radius: 5px;
         outline: none;
         border: 1px solid #d3d3d2;
+}
+.feedback-form textarea::-webkit-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.feedback-form textarea:-ms-input-placeholder {
+        font-weight: 400;
+        color: #999999;
+}
+.feedback-form textarea::-ms-input-placeholder {
+        font-weight: 400;
+        color: #999999;
 }
 .feedback-form textarea::placeholder {
         font-weight: 400;
@@ -1050,11 +1111,13 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-close::before {
-        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
 }
 
 .feedback-close::after {
-        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
 }
 
 /*Cтраница каталога*/
@@ -1102,7 +1165,8 @@ input[type="radio"].visually-hidden {
         line-height: 16px;
         font-weight: 400;
         color: #ffffff;
-        text-decoration-color: #adbdb4;
+        -webkit-text-decoration-color: #adbdb4;
+                text-decoration-color: #adbdb4;
 }
 .breadcrumbs a:hover {
         color: #ffbc9e;
@@ -1166,7 +1230,8 @@ input[type="radio"].visually-hidden {
 .form-filter .sorting {
         padding: 7px 27px 8px 14px;
         -moz-appearance: none;
-        appearance: none;
+        -webkit-appearance: none;
+                appearance: none;
 
         font-size: 16px;
         line-height: 18px;
@@ -1404,7 +1469,6 @@ input[type="radio"].visually-hidden {
 }
 .footer-social  {
         display: flex;
-
         text-align: center;
 }
 .social-button {
@@ -1434,7 +1498,8 @@ input[type="radio"].visually-hidden {
         font-weight: 400;
 
         color: #ffffff;
-        text-decoration-color: #adbdb4;
+        -webkit-text-decoration-color: #adbdb4;
+                text-decoration-color: #adbdb4;
 }
 .footer-nav a:hover {
         color: #ffbc9e;
@@ -1470,7 +1535,8 @@ input[type="radio"].visually-hidden {
         line-height: 18px;
         font-weight: 400;
         color: #ffffff;
-        text-decoration-color: #adbdb4;
+        -webkit-text-decoration-color: #adbdb4;
+                text-decoration-color: #adbdb4;
 }
 .copyright a:hover {
         color: #ffbc9e;
