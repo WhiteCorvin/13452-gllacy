@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Глейси-каталог</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -15,9 +15,9 @@
           <li class="box-sub-catalog"><a href="#">Каталог</a>
             <ul class="sub-catalog">
               <li><a href="#">Новинки</a></li>
-              <li><a href="#">Сливочное</a></li>
+              <li class="sub-catalog-active"><a>Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
-              <li><a href="#">Фрутковый лёд</a></li>
+              <li><a href="#">Фруктовый лёд</a></li>
               <li><a href="#">Мелорин</a></li>
             </ul>
           </li>
@@ -57,8 +57,10 @@
               <label class="visually-hidden"  for="user-password">Поле ввода пароля</label>
               <input id="user-password" name="password" type="password" placeholder="Пароль">
               <button class="button" type="submit">Войти</button>
-              <a href="#">Забыли пароль</a>
-              <a href="#">Регистрация</a>
+              <div class="log-in-form-reference">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </div> 
             </form>
           </li>
           <li class="basket basket-fill">
@@ -79,13 +81,13 @@
                   <td>
                     <img src="img/item-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="33" height="33">
                   </td>
-                  <td>
+                  <td class="table-item-descripton">
                     Пломбир с апельсиновым джемом
                   </td>
-                  <td>
+                  <td class="table-item-volume">
                     1,5кг * <span>200 руб.</span>
                   </td>
-                  <td>
+                  <td class="table-item-price">
                     300 руб.
                   </td>
                 </tr>
@@ -96,13 +98,13 @@
                   <td>
                     <img src="img/item-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="33" height="33">
                   </td>
-                  <td>
+                  <td class="table-item-descripton">
                     Клубничный пломбир с присыпкой из белого шоколада
                   </td>
-                  <td>
+                  <td class="table-item-volume">
                     1,5кг * <span>300 руб.</span>
                   </td>
-                  <td>
+                  <td class="table-item-price">
                     450 руб.
                   </td>
                 </tr>
@@ -200,6 +202,7 @@
             </h3>
             <img src="img/item-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой." width="267" height="267">
             <b>310&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <h3>
@@ -207,6 +210,7 @@
             </h3>
             <img src="img/item-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
             <b>380&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
             </li>
           <li class="catalog-item">
             <h3>
@@ -214,6 +218,7 @@
             </h3>
             <img src="img/item-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
             <b>355&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <h3>
@@ -221,6 +226,7 @@
             </h3>
             <img src="img/item-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
             <b>415&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <h3>
@@ -228,6 +234,7 @@
             </h3>
             <img src="img/item-5.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
             <b>325&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <h3>
@@ -235,6 +242,7 @@
             </h3>
             <img src="img/item-6.jpg" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
             <b>410&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <h3>
@@ -242,6 +250,7 @@
             </h3>
             <img src="img/item-7.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
             <b>375&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <h3>
@@ -249,6 +258,7 @@
             </h3>
             <img src="img/item-8.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
             <b>320&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <h3>
@@ -256,6 +266,7 @@
             </h3>
             <img src="img/item-9.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
             <b>440&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <h3>
@@ -263,6 +274,7 @@
             </h3>
             <img src="img/item-10.jpg" alt="Сливочное с ментоловым сиропом" width="267" height="267">
             <b>435&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <h3>
@@ -270,6 +282,7 @@
             </h3>
             <img src="img/item-11.jpg" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
             <b>355&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <h3>
@@ -277,6 +290,7 @@
             </h3>
             <img src="img/item-12.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
             <b>420&#8381;<span>&#47;кг</span></b>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
         </ul>
         <ul class="pagination-list">
