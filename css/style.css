@@ -1529,7 +1529,7 @@ input[type="radio"].visually-hidden {
         position: relative;
         font-weight: 700;
 }
-.footer-nav b::before {
+.footer-nav li:first-of-type a::before {
         content: "";
         position: absolute;
         top: 2px;
