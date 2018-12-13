@@ -1541,6 +1541,7 @@ input[type="radio"].visually-hidden {
 .copyright {
         display: flex;
         flex-direction: column;
+        margin-right: 5px;
 }
 .copyright span {
         font-size: 12px;
@@ -1548,6 +1549,7 @@ input[type="radio"].visually-hidden {
         font-weight: 400;
         color: #ffffff;
 }
+
 .copyright a {
         font-size: 12px;
         line-height: 18px;
