@@ -1549,7 +1549,9 @@ input[type="radio"].visually-hidden {
         font-weight: 400;
         color: #ffffff;
 }
-
+.copyright > a {
+	height: 40px;
+}
 .copyright a {
         font-size: 12px;
         line-height: 18px;
