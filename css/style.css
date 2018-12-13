@@ -67,10 +67,10 @@ input[type="radio"].visually-hidden {
 .main-header {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        flex-wrap: wrap;	
         position: relative;
         width: 1146px;
-        margin-bottom: 312px;
+        margin-bottom: 262px;
         padding-top: 10px;
 }
 .catalog-page .main-header{
@@ -89,6 +89,8 @@ input[type="radio"].visually-hidden {
 }
 .main-nav > a {
         margin-right: 10px;
+	width: 154px;
+        height:64px;
 }
 .main-nav .site-nav {
         display: flex;
@@ -100,7 +102,6 @@ input[type="radio"].visually-hidden {
 }
 .site-nav > li {
         padding: 7px 14px 8px 14px;
-        margin-bottom: 8px;
         border-radius: 16px;
 }
 .main-nav a,
@@ -399,11 +400,8 @@ input[type="radio"].visually-hidden {
         box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 .header-contacts {
-        position: absolute;
-        right:27px;
-        bottom: -40px;
-        z-index: 0;
         margin: 0;
+        margin-left: auto;
         text-align: right;
 }
 .header-contacts b {
@@ -1125,10 +1123,6 @@ input[type="radio"].visually-hidden {
 .catalog-page main{
         border-bottom: 1px solid #a9bbb1;
 }
-
-.catalog-page .main-header {
-        margin-bottom: 20px;
-}
 .catalog-page main {
         display: flex;
         flex-direction: column;
@@ -1143,8 +1137,14 @@ input[type="radio"].visually-hidden {
         line-height: 41px;
         font-weight: 700;
 }
+.breadcrumbs-contact-wrapper {
+	order: 0;
+	display: flex;
+	justify-content: space-between;
+
+}
 .breadcrumbs {
-        order: 0;
+	align-self: flex-end;
         display: flex;
         margin: 0;
         margin-bottom: 5px;
@@ -1178,6 +1178,22 @@ input[type="radio"].visually-hidden {
         content: "»";
         position: absolute;
         right: -14px;
+}
+.catalog-contacts {
+	margin: 0;
+	text-align: right;
+}
+.catalog-contacts b {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 700;
+}
+.catalog-contacts a {
+        text-decoration: none;
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 700;
+        color: #ffffff;
 }
 .filter {
         order: 2;
