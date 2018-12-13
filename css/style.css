@@ -43,7 +43,7 @@ input[type="radio"].visually-hidden {
         background-color: #849d8f;
         background-image: url("../img/promo-1.png");
         background-repeat: no-repeat;
-        background-position:  center 85px;
+        background-position:  center 0;
         
         transition: background-image 0.5s ease, background-color 0.5s ease;        
 }
@@ -70,7 +70,7 @@ input[type="radio"].visually-hidden {
         flex-wrap: wrap;	
         position: relative;
         width: 1146px;
-        margin-bottom: 262px;
+        margin-bottom: 270px;
         padding-top: 10px;
 }
 .catalog-page .main-header{
@@ -539,7 +539,7 @@ input[type="radio"].visually-hidden {
 
 .promo-slider {
         position: relative;
-        margin-bottom: 43px;
+        margin-bottom: 40px;
 }
 .slider-list {
         margin: 0;
@@ -620,21 +620,23 @@ input[type="radio"].visually-hidden {
         display:none;
 }
 
-.promo-stocks {
+.promo-stocks-wrapper {
         display: flex;
         justify-content: space-between;
         margin-bottom: 38px;
 }
 .stock {
-        position: relative;
+        display: flex;
+        flex-direction: column;
         box-sizing: border-box;
         width: 560px;
         min-height: 230px;
-        padding: 12px 20px 20px 20px; 
+        padding: 12px 20px 25px 20px; 
         border-radius: 15px;
 }
-.stock h3 {
+.stock b {
         margin: 0;
+        margin-bottom: 15px;
         padding: 0;
 
         font-size: 35px;
@@ -642,16 +644,17 @@ input[type="radio"].visually-hidden {
         font-weight: 700;
 }
 .stock p {
+	margin: 0;
+
         font-size: 18px;
         line-height: 22px;
         font-weight: 700;
 }
 .stock a {
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-        width: 170px;
-        padding: 12px 5px;
+    	align-self: flex-end;
+        margin-top: auto;
+        padding: 12px 22px;
+        
 
         font-size: 18px;
         line-height: 24px;
@@ -749,7 +752,7 @@ input[type="radio"].visually-hidden {
         flex-direction: column;
         width: 1106px;
         margin-bottom: 40px;
-        padding: 23px 20px 7px 20px;
+        padding: 23px 20px 25px 20px;
 
 
         font-size: 16px;
@@ -797,15 +800,14 @@ input[type="radio"].visually-hidden {
         padding: 0;
         margin: 0;
 
-        list-style: none;
+        list-style: none;	
 }
 .features li {
         width: 480px;
-        margin-left: 55px;
+        padding: 20px 0 0 55px;
 }
 .features p {
         margin: 0;
-        margin-bottom: 20px;
 }
 .index-column {
         display: flex;
@@ -1141,7 +1143,6 @@ input[type="radio"].visually-hidden {
 	order: 0;
 	display: flex;
 	justify-content: space-between;
-
 }
 .breadcrumbs {
 	align-self: flex-end;
@@ -1501,12 +1502,13 @@ input[type="radio"].visually-hidden {
 .footer-nav {
         display: flex;
         flex-wrap: wrap;        
-        width: 340px;
+        width: 350px;
         margin: 0;
         padding: 0;
 }
 .footer-nav li {
-        min-width: 140px;
+        min-width: 115px;
+        padding-left: 25px;
 }
 .footer-nav a { 
         font-size: 13px;
@@ -1523,7 +1525,7 @@ input[type="radio"].visually-hidden {
 .footer-nav a:active {
         color: #ffbc9e;
 }
-.footer-nav b {
+.footer-nav li:first-of-type a {
         position: relative;
         font-weight: 700;
 }
