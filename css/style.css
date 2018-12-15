@@ -208,6 +208,10 @@ input[type="radio"].visually-hidden {
 .user-nav li:focus {
         background-color: #f7f8f4;
 }
+.user-nav li:hover > a,
+.user-nav li:focus > a {
+        color: #323232;
+}
 .user-nav .search {
         justify-content: center;
         align-items: center;
@@ -1198,6 +1202,7 @@ input[type="radio"].visually-hidden {
 }
 .filter {
         order: 2;
+        margin-bottom: 20px;
 }
 .filter ul {
         margin: 0;
@@ -1215,8 +1220,10 @@ input[type="radio"].visually-hidden {
         display: flex;
 }
 .form-filter fieldset {
+	position: relative;
         margin: 0;
         margin-right: 15px;
+        margin-bottom: 15px;
         padding: 0;   
         padding-top: 6px;           
         border: none;
@@ -1259,12 +1266,24 @@ input[type="radio"].visually-hidden {
         border: none;
         border-radius: 20px;
 }
-.form-filter .sorting:hover:focus {
+.form-filter fieldset:first-child:hover .sorting{
         color: #323232;
 }
 .form-filter .sorting:active {
         color: #323232;
         background-color: #ffffff;
+}
+.form-filter fieldset:first-child::after {
+	content: "";
+	position: absolute;
+	bottom: 10px;
+	right: 12px;
+	border: 6px solid transparent;
+	border-top: 10px solid #ffffff;
+	cursor: pointer;
+}
+.form-filter fieldset:first-child:hover::after {
+	border-top: 10px solid #323232;
 }
 .form-filter .block-slider {
         position: relative;
@@ -1316,22 +1335,22 @@ input[type="radio"].visually-hidden {
         background-color: rgba(248,247,244,0.2);
         border-radius: 20px;
 }
-.filter-fat label {
+.filter-fat .filter-option {
         position: relative;
         padding-left: 32px;
         padding-right: 15px;
 }
-.filter-fat .filter-option:last-of-type label {
+.filter-fat .filter-option:last-of-type {
         padding-left: 32px;
         padding-right: 0;
 }
 .filter-fat .filter-option label::before {
         content: "";
         position: absolute;
-        top: -2px;
+        top: 0px;
         left: 0px;
-        width: 15px;
-        height: 15px;
+        width: 14px;
+        height: 14px;
 
         border-radius: 50%;
         border: 4px solid #e6ebe9;
@@ -1342,14 +1361,73 @@ input[type="radio"].visually-hidden {
 .filter-fat .filter-option label:focus::before {
         border-color: #ffffff;
 }
-     
+.filter-fat .filter-input-radio:checked + label::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 8px;
+        height: 8px;
+
+        border-radius: 50%;
+        background-color: #eef2f0;
+} 
+.filter-fat .filter-input-radio:checked + label:hover::after {
+        background-color: #ffffff;
+} 
+.form-filter .filter-inner {
+	padding: 7px 25px 8px 14px;
+        background-color: rgba(248,247,244,0.2);
+        border-radius: 20px;
+}
+.filter-inner .filter-option {
+	position: relative;
+	padding: 0 18px 0 34px;
+}
+.filter-inner .filter-option:last-of-type {
+	padding-right: 0;
+}
+.filter-inner .filter-option label::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 25px;
+        height: 25px;
+
+        background: url("../img/checkbox-off.svg") no-repeat;
+	opacity: 0.8;
+}
+.filter-inner .filter-option label:hover::before {
+	opacity: 1;
+} 
+.filter-inner .filter-input-checkbox:checked + label::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 25px;
+        height: 25px;
+
+        background: url("../img/checkbox-on.svg") no-repeat;
+	opacity: 0.8;
+}
+.filter-inner .filter-input-checkbox:checked + label:hover::before {
+	opacity: 1;
+}
 .form-filter .btn-submit {
+	align-self: center;
+	margin-top: 7px;
+	padding: 8px 28px;
+
         font-size: 16px;
         line-height: 18px;
         font-weight: 500;
         color: #ffffff;
 
         background-color: rgba(248,247,244,0.2);
+        border: 2px solid #ffffff;
+        border-radius: 20px;
 }
 .form-filter .btn-submit:hover {
         color: #323232;
@@ -1363,15 +1441,15 @@ input[type="radio"].visually-hidden {
         order: 3;
         display: flex;
         flex-direction: column;
+	margin-bottom: 30px;
 }
 .catalog-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 0;
-        margin-bottom: 40px;
+        margin-bottom: 45px;
         padding: 0;
-
         list-style: none;
 }
 
@@ -1440,15 +1518,20 @@ input[type="radio"].visually-hidden {
         align-self: flex-end;
         display: flex;
         justify-content: space-between;
-        width: 180px;
+        width: 200px;
         margin: 0;
-        margin-bottom: 40px;
         padding: 0;
 
         list-style: none;
 }
 .pagination-list li {
-
+	position: relative;
+	width: 26px;
+	height: 26px;
+	margin-right: 2px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 50%
 }
 .pagination-list a {
         text-decoration: none;
@@ -1457,16 +1540,45 @@ input[type="radio"].visually-hidden {
         font-weight: 500;
         color: #ffffff;
 }
+.pagination-list .pagination-item-current {
+	background-color: #ffffff;
+}
 .pagination-list .pagination-item-current a {
         color: #323232;
-        background-color: #ffffff;
 }
-.pagination-list a:hover {
+.pagination-list .pagination-item:hover {
         background-color: rgba(248,247,244,0.2);
 }
-.pagination-list a:active {
-        color: #323232;
+.pagination-list .pagination-item:active {
         background-color: #ffffff;
+}
+.pagination-list .pagination-item:active a {
+	color: #323232;
+}
+.pagination-left a::before {
+	content: "";
+	position: absolute;
+	top: 9px;
+	right: 5px;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #ffffff;
+	border-left: 2px solid #ffffff;
+	transform: rotate(-45deg);
+}
+.pagination-right a::before {
+	content: "";
+	position: absolute;
+	top: 9px;
+	right: 5px;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #ffffff;
+	border-right: 2px solid #ffffff;
+	transform: rotate(45deg);
+}
+.pagination-disabled {
+	opacity: 0.2;
 }
 /*Подвал сайта*/
 
