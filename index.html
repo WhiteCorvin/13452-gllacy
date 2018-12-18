@@ -40,7 +40,7 @@
               </svg>
               <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="search">Поле ввода для поиска</label>
-                <input id="search" name="search" type="search" placeholder="Что ищем?">
+                <input id="search" name="search" type="search" placeholder="Что ищем?" required>
                 <button class="visually-hidden" type="submit">Искать</button>
               </form>
             </li>
@@ -55,9 +55,9 @@
               <a href="#">Вход</a>
               <form class="log-in-form" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="user-email">Поле ввода email</label>
-                <input id="user-email" name="user-email" type="email" placeholder="Электронная почта">
+                <input id="user-email" name="user-email" type="email" placeholder="Электронная почта" required>
                 <label class="visually-hidden"  for="user-password">Поле ввода пароля</label>
-                <input id="user-password" name="password" type="password" placeholder="Пароль">
+                <input id="user-password" name="password" type="password" placeholder="Пароль" required>
                 <button class="button" type="submit">Войти</button>
                 <div class="log-in-form-reference">
                 <a href="#">Забыли пароль?</a>
@@ -180,7 +180,7 @@
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="email-sub">Поле ввода email для подписки</label>
-                <input id="email-sub" name="email" type="email" placeholder="Электронная почта">
+                <input id="email-sub" name="email" type="email" placeholder="Электронная почта" required>
                 <button class="button" type="submit">Отправить</button>
               </form>
             </div>
@@ -188,7 +188,8 @@
         </div> 
         <section class="contacts container">
           <h2 class="visually-hidden">Контакты</h2>
-          <img src="img/map-with-pin.jpg" alt="Карта, на которой отмечен магазин">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.547830754205!2d30.324313906225473!3d59.93964492627821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1545060431217" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <img src="img/map-with-pin.jpg" width="1200" height="430" alt="Карта, на которой отмечен магазин">
           <section class="main-contacts">
             <p>
               <span>Адрес главного офиса</br> и офлайн-магазина:</span></br>

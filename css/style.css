@@ -218,6 +218,9 @@ input[type="radio"].visually-hidden {
 .user-nav li:focus > a {
         color: #323232;
 }
+.user-nav input[required] {
+        box-shadow: none;
+}
 .user-nav .search {
         justify-content: center;
         align-items: center;
@@ -752,7 +755,7 @@ input[type="radio"].visually-hidden {
         display: flex;
         flex-direction: column;
         width: 1106px;
-        margin-bottom: 40px;
+        margin-bottom: 38px;
         padding: 23px 20px 20px 20px;
 
 
@@ -821,7 +824,7 @@ input[type="radio"].visually-hidden {
         width: 290px;
         min-height: 170px;
         margin-right: 26px;
-        padding: 22px 250px 25px 20px;
+        padding: 22px 250px 27px 20px;
         border-radius: 15px;
 
         color: #323232;
@@ -867,7 +870,7 @@ input[type="radio"].visually-hidden {
 
         min-height: 155px;
         margin: 0;
-        padding: 28px 20px 25px 22px;
+        padding: 28px 20px 27px 22px;
         border-radius: 15px;
         background-color: #f8f7f4;
 }
@@ -875,6 +878,9 @@ input[type="radio"].visually-hidden {
         margin: 0;
         padding: 0;
         margin-bottom: 35px;    
+}
+.subscription input[required] {
+        box-shadow: none;
 }
 .subscription-form input {
         float: left;
@@ -892,7 +898,7 @@ input[type="radio"].visually-hidden {
 }
 .subscription-form .button {
         float: right;
-        padding: 8px 18px 12px 18px;
+        padding: 9px 18px 13px 18px;
 
         font-size: 18px;
         line-height: 24px;
@@ -924,6 +930,7 @@ input[type="radio"].visually-hidden {
 .contacts.container {
         position: relative;
         width: 1200px;
+        height: 430px;
         padding: 0;
 }
 .main-contacts {
@@ -933,15 +940,24 @@ input[type="radio"].visually-hidden {
         position: absolute;
         top: 63px;
         right: 27px;
+        z-index: 3;
         width: 250px;
         padding: 25px 25px 30px 25px;
         border-radius: 15px;
         background-color: #ffffff;
         color: #323232;
-}
+}       
 .contacts img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
         width: 1200px;
         height: 430px;
+}
+.contacts iframe {
+        position: relative;
+        z-index: 2;
 }
 .main-contacts p {
         margin: 0;
@@ -949,7 +965,7 @@ input[type="radio"].visually-hidden {
         padding: 0;
 }
 .main-contacts p:last-of-type {
-        margin-bottom: 30px;
+        margin-bottom: 27px;
 }
 .main-contacts span {
         font-size: 14px;
@@ -972,12 +988,45 @@ input[type="radio"].visually-hidden {
         padding: 10px 25px 12px 25px;
         text-decoration: none;
 }
+@keyframes shake {
+        0%,
+        100% {
+                transform: translate(0px, -50%);
+        }
+
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+                transform: translate(-10px, -50%);
+        }
+
+        20%,
+        40%,
+        60%,
+        80% {
+                transform: translate(10px, -50%);
+        }
+}
+@keyframes openfromright{
+    0% { 
+        opacity: 0; 
+        transform: translate(200px, -50%); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translate(0, -50%); 
+    } 
+} 
+
 .feedback-popup {     
         display: none;
         flex-direction: column;
         position: fixed;
         top: 50%;
         left: 50%;
+        z-index: 1000;
         width: 426px;
         margin-left: -238px;
         padding: 15px 25px; 
@@ -1096,9 +1145,12 @@ input[type="radio"].visually-hidden {
                 transform: rotate(-45deg);
 }
 .feedback-open {
-    display: block;
+        display: block;
+        animation: openfromright 0.6s;
 }
-
+.input-error {
+        animation: shake 0.6s;
+}
 /*Cтраница каталога*/
 
 .catalog-page main{
@@ -1323,7 +1375,7 @@ input[type="radio"].visually-hidden {
         padding-left: 32px;
         padding-right: 0;
 }
-.filter-fat .filter-option label::before {
+.filter-fat label::before {
         content: "";
         position: absolute;
         top: -1px;
@@ -1334,10 +1386,11 @@ input[type="radio"].visually-hidden {
         background: url(../img/radio-off.svg) no-repeat;
         opacity: 0.8;
 }
-.filter-fat .filter-option label:hover::before {
+.filter-fat label:hover::before {
         opacity: 1;
 }
-.filter-fat .filter-input-radio:checked + label::after {
+
+.filter-input-radio:checked + label::after {
         content: "";
         position: absolute;
         top: -1px;
@@ -1348,7 +1401,7 @@ input[type="radio"].visually-hidden {
         background: url(../img/radio-on.svg) no-repeat;
         opacity: 0.8;
 } 
-.filter-fat .filter-input-radio:checked + label:hover::after {
+.filter-input-radio:checked + label:hover::after {
         opacity: 1;
 } 
 .form-filter .filter-inner {
@@ -1363,7 +1416,7 @@ input[type="radio"].visually-hidden {
 .filter-inner .filter-option:last-of-type {
 	padding-right: 0;
 }
-.filter-inner .filter-option label::before {
+.filter-inner label::before {
         content: "";
         position: absolute;
         top: 0px;
@@ -1374,10 +1427,10 @@ input[type="radio"].visually-hidden {
         background: url("../img/checkbox-off.svg") no-repeat;
 	opacity: 0.8;
 }
-.filter-inner .filter-option label:hover::before {
+.filter-inner label:hover::before {
 	opacity: 1;
 } 
-.filter-inner .filter-input-checkbox:checked + label::before {
+.filter-input-checkbox:checked + label::before {
         content: "";
         position: absolute;
         top: 0px;
@@ -1388,8 +1441,12 @@ input[type="radio"].visually-hidden {
         background: url("../img/checkbox-on.svg") no-repeat;
 	opacity: 0.8;
 }
-.filter-inner .filter-input-checkbox:checked + label:hover::before {
+.filter-input-checkbox:checked + label:hover::before {
 	opacity: 1;
+}
+.form-filter input[disabled] + label {
+        opacity: 0.4;
+        color: #ffffff;
 }
 .form-filter .btn-submit {
 	align-self: center;
@@ -1563,7 +1620,7 @@ input[type="radio"].visually-hidden {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 13px;
+        padding-top: 19px;
         margin-bottom: 20px;
 }
 .catalog-page .main-footer {
@@ -1597,7 +1654,7 @@ input[type="radio"].visually-hidden {
 .footer-nav {
         display: flex;
         flex-wrap: wrap;        
-        width: 370px;
+        width: 360px;
         margin: 0;
         padding: 0;
         padding-top: 5px;
