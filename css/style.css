@@ -49,17 +49,17 @@ input[type="radio"].visually-hidden {
 }
 .site-wrapper::before,
 .site-wrapper::after {
-  content: "";
+        content: "";
 
-  visibility: hidden;
+        visibility: hidden;
 }
 
 .site-wrapper::before {
-  background-image: url("../img/promo-2.png");
+        background-image: url("../img/promo-2.png");
 }
 
 .site-wrapper::after {
-  background-image: url("../img/promo-3.png");
+        background-image: url("../img/promo-3.png");
 }
 
 /*Шапка сайта*/
@@ -89,12 +89,13 @@ input[type="radio"].visually-hidden {
 }
 .main-nav > a {
         margin-right: 10px;
-	width: 154px;
+        width: 154px;
         height:64px;
 }
 .main-nav .site-nav {
         display: flex;
         align-items: center;
+        margin-bottom: 5px;
 
         font-size: 16px;
         line-height: 18px;
@@ -785,7 +786,7 @@ input[type="radio"].visually-hidden {
         height: 49px;
 }
 .features .ice-cream-icon::before {
-        background-image: url(../img/icecream.svg);
+        background-image: url(../img/Icecream.svg);
 }
 .features .cow-icon::before {
         background-image: url(../img/cow.svg);
@@ -1310,7 +1311,7 @@ input[type="radio"].visually-hidden {
 .form-filter fieldset:first-child::after {
 	content: "";
 	position: absolute;
-	bottom: 10px;
+	bottom: 8px;
 	right: 12px;
 	border: 6px solid transparent;
 	border-top: 10px solid #ffffff;
@@ -1377,7 +1378,7 @@ input[type="radio"].visually-hidden {
         border: 9px solid white;
 }
 .form-filter .filter-fat {
-        padding: 7px 18px 8px 14px;
+        padding: 7px 18px 8px 15px;
         background-color: rgba(248,247,244,0.2);
         border-radius: 20px;
 }
@@ -1387,7 +1388,7 @@ input[type="radio"].visually-hidden {
         padding-right: 15px;
 }
 .filter-fat .filter-option:nth-of-type(n+2) {
-        padding-right: 18px;    
+        padding-right: 19px;    
 }
 .filter-fat .filter-option:last-of-type {
         padding-left: 32px;
@@ -1441,8 +1442,8 @@ input[type="radio"].visually-hidden {
 .filter-inner label::before {
         content: "";
         position: absolute;
-        top: 1px;
-        left: 1px;
+        top: 2px;
+        left: 2px;
         width: 25px;
         height: 25px;
 
