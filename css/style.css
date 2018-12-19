@@ -1420,7 +1420,7 @@ input[type="radio"].visually-hidden {
         background: url(../img/radio-on.svg) no-repeat;
         opacity: 0.8;
 } 
-.filter-input-radio:checked + label:hover::after {
+.filter-input-radio:checked + label:hover::before {
         opacity: 1;
 } 
 .form-filter .filter-inner {
