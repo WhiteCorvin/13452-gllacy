@@ -19,9 +19,7 @@
                 max-width: 100%;
                 height: auto;
         }
-        .visually-hidden:not(:focus):not(:active),
-        input[type="checkbox"].visually-hidden,
-        input[type="radio"].visually-hidden {
+        .visually-hidden {
                 position: absolute;
 
                 width: 1px;
@@ -116,8 +114,8 @@
                 color: #ffffff;
         }
         .site-nav a {
-                -webkit-text-decoration-color: #adbdb4;
-                        text-decoration-color: #adbdb4;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(233, 233, 233, 0.4);
         }
         .site-nav > li:hover,
         .user-nav > li:hover {
@@ -625,6 +623,9 @@
         .slider-controls label:hover {
                 background-color: #b2c1b7;
         }
+        .slider-controls label:focus {
+                background-color: #b2c1b7;
+        }
         .slide {
                 display:none;
         }
@@ -684,6 +685,7 @@
         .hits-list {
                 display: flex;
                 justify-content: space-between;
+                flex-wrap: wrap;
                 margin: 0;
                 padding: 0;
                 list-style: none;
@@ -1091,6 +1093,7 @@
         }
         .feedback-popup b {
                 display: inline-block;
+                vertical-align: top;
                 margin-bottom: 20px;
                 font-size: 24px;
                 line-height: 28px;
@@ -1156,6 +1159,7 @@
                 border-radius: 5px;
                 outline: none;
                 border: 1px solid #d3d3d2;
+                resize: none;
         }
         .feedback-form textarea::-webkit-input-placeholder {
                 font-size: 16px;
@@ -1625,6 +1629,9 @@
                 font-weight: 500;
                 text-align: center;
                 text-decoration: underline;
+        }
+        .catalog-item a {
+                color: #ffffff;
         }
         .catalog-item b {
                 position: absolute;
