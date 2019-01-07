@@ -356,7 +356,7 @@ img {
 .log-in-form button {
 	margin-top: 3px;
 	margin-left: 8px;
-	padding: 12px 24px 11px 24px;
+	padding: 12px 24px 10px 24px;
 	border-radius: 19px;
 }
 .log-in-form-reference {
@@ -761,9 +761,6 @@ img {
 	background-color: #442a1e;
 	background-image: url("../img/chocolate-bg.png");
 }
-.hits {
-	margin-bottom: 37px;
-}
 .hits-list {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -787,16 +784,12 @@ img {
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 	width: 267px;
+	margin-bottom: 38px;
 }
-.hit-item::before {
-	content: "";
-	position: absolute;
-	width: 64px;
-	height: 64px;
-	border-radius: 50%;
-	background-image: url("../img/hit.svg");
+.hit-item:hover {
+	z-index: 20;
 }
-.hit-item:hover::after {
+.hit-item:hover::before {
 	content: "";
 	position: absolute;
 	z-index: 1;
@@ -809,16 +802,14 @@ img {
 	-webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 	        box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
-.hit-item:hover {
-	z-index: 20;
-}
 .hit-item h3 {
 	-webkit-box-ordinal-group: 3;
 	    -ms-flex-order: 2;
 	        order: 2;
-
 	margin: 0;
-	margin-top: 12px;
+	margin-top: 10px;
+	width: 258px;
+	min-height: 44px;
 	z-index: 3;
 	font-size: 16px;
 	line-height: 22px;
@@ -827,6 +818,10 @@ img {
 	text-decoration: underline;
 }
 .hit-item a {
+	min-height: 41.2px;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 500;
 	color: #ffffff;
 }
 .hit-item a:hover {
@@ -834,7 +829,8 @@ img {
 }
 .hit-item b {
 	position: absolute;
-	top: 208px;
+	top: 211px;
+	left: 0;
 	font-size: 45px;
 	line-height: 45px;
 	font-weight: 700;
@@ -851,12 +847,17 @@ img {
 	border-radius: 50%;
 }
 .hit-item .button {
+	min-height: 16px;
 	visibility: hidden;
 	position: absolute;
-	bottom: -60px;
+	bottom: -56px;
 	left: 35px;
 	z-index: 3;
-	padding: 13px 15px;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #ffffff;
 }
 .hit-item .button:hover {
 	color: #ffffff;
@@ -1012,7 +1013,7 @@ img {
 	min-height: 66px;
 	margin: 0;
 	padding: 0;
-	margin-bottom: 35px;    
+	margin-bottom: 37px;    
 }
 .subscription input[required] {
 	-webkit-box-shadow: none;
@@ -1028,7 +1029,7 @@ img {
 }
 .subscription-form input {
 	width: 345px;
-	padding: 10px;  
+	padding: 9px 10px 9px 10px;  
 
 	font-size: 14px;
 	line-height: 24px;
@@ -1040,7 +1041,8 @@ img {
 	border-radius: 5px;
 }
 .subscription-form .button {
-	padding: 9px 18px 13px 18px;
+	align-self: center;
+	padding: 8px 18px 12px 18px;
 
 	font-size: 18px;
 	line-height: 24px;
@@ -1062,12 +1064,14 @@ img {
 	color: #999999;
 }
 .subscription-form input:hover {
-	padding: 9px;
+	padding: 8px 9px;
 	border: 2px solid #c7c6c5;
+	outline: none;
 }
 .subscription-form input:focus {
-	padding: 9px;
-	border: 2px solid #8fbdec;       
+	padding: 8px 9px;
+	border: 2px solid #8fbdec;
+	outline: none;       
 }
 .contacts.container {
 	position: relative;
@@ -1146,7 +1150,7 @@ img {
 	text-decoration: none;
 }
 .main-contacts .button {
-	padding: 10px 25px 12px 25px;
+	padding: 10px 25px 11px 25px;
 	text-decoration: none;
 }
 @-webkit-keyframes shake {
@@ -1878,13 +1882,16 @@ img {
 	border-radius: 50%;
 }
 .catalog-item .button {
-	min-height: 22px;
+	min-height: 16px;
 	visibility: hidden;
 	position: absolute;
-	bottom: -60px;
+	bottom: -56px;
 	left: 35px;
 	z-index: 3;
-	padding: 13px 15px;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
 	color: #ffffff;
 }
 .catalog-item .button:hover {
